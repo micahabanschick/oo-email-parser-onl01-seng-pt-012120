@@ -11,7 +11,7 @@ class EmailAddressParser
   end 
   
   def parse 
-    arr = @emails.split(", " || " ")
+    arr = @emails.split(", ").each{|elem| elem.split(" ")}
     arr
   end 
     
